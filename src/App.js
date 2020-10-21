@@ -1,10 +1,16 @@
 import React from 'react';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Dashboard from './components/dashboard/Dashboard';
+import Navbar from './components/layout/Navbar';
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>MarioPlan</h1>
+        <Navbar></Navbar>
+        <Switch>
+          <Route path="/" component={Dashboard}>
+          </Route>
+        </Switch>
       </div>
     </BrowserRouter>
   );
