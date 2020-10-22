@@ -18,15 +18,10 @@ const SignedInLinks = props => {
         </ul>
     )
 }
-const mapStateToProps = (state) => {
-    return {
-        
-    }
-}
 const mapDispatchToProps = (dispatch) => {
     return {
         signOut: () => dispatch(signOut())
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(SignedInLinks);
+export default connect(null,mapDispatchToProps)(SignedInLinks);
