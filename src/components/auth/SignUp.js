@@ -12,14 +12,14 @@ class SignUp extends Component {
             [e.target.id]: e.target.value
         })
     }
-    handelSubmit = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state);
     }
     render() { 
         return ( 
             <div className="container">
-                <form onSubmit={this.handelSubmit} className="white">
+                <form onSubmit={this.handleSubmit} className="white">
                     <h5 className="grey-text text-darken-3">Sign Up</h5>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
