@@ -1,12 +1,14 @@
 import React from 'react';
 
 const ProjectSummary = ({project}) => {
+    const  date = new Date(null);
+    date.setTime(project.createdAt.seconds*1000);
     return(
         <div className="card z-depth-0 project-summary">
                 <div className="card-content grey-text text-darken-3">
                     <span className="card-title">{project.title}</span>
-                    <p>Posted by the net Ninja</p>
-                    <p className="grey-text date">3rd September, 2am</p>
+                    <p>Posted by {project.authorFirstName} {project.authorLastName}</p>
+                    <p className="grey-text date">{date.toDateString()}</p>
                 </div>
             </div>
     )

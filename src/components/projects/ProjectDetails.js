@@ -5,7 +5,6 @@ import { Redirect } from 'react-router-dom';
 import {compose} from 'redux';
 
 const ProjectDetails = (props) => {
-    console.log(props);
     const {project,auth} = props;
     
     if (project) {
@@ -34,7 +33,6 @@ const ProjectDetails = (props) => {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state);
     const id = ownProps.match.params.id;
     const projects = state.firestore.data.projects;
     return{

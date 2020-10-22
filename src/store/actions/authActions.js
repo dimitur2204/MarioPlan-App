@@ -14,7 +14,6 @@ export const signUp = (credentials) => {
     return (dispatch, getState, {getFirestore,getFirebase}) => {
         const firestore = getFirestore();
         const firebase = getFirebase();
-        console.log(firebase);
         firebase.createUser({email:credentials.email,password:credentials.password})
         .then(res => {
             const {user} = res;  
