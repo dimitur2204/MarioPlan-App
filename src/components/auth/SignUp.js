@@ -17,6 +17,7 @@ class SignUp extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
+        this.props.signUp(this.state);
     }
     render() { 
         if(this.props.auth.uid) return <Redirect to='/'></Redirect>
@@ -42,6 +43,9 @@ class SignUp extends Component {
                     </div>
                     <div className="input-field">
                         <button className="btn pink lighten-1 z-depth-0">Sign Up</button>
+                        <div className="red-text center">
+                            {this.props.authError ? <p>{this.props.authError}</p> : null}
+                        </div>
                     </div>
                 </form>
             </div>
