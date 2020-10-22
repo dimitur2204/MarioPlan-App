@@ -14,7 +14,7 @@ export const signUp = (credentials) => {
     return (dispatch, getState, {getFirestore,getFirebase}) => {
         const firestore = getFirestore();
         const firebase = getFirebase();
-        firebase.createUser({email:credentials.email,password:credentials.password})
+        firebase.auth().createUserWithEmailAndPassword(credentials.email,credentials.password)
         .then(res => {
             const {user} = res;  
             return firestore.collection('users').doc(user.uid).set({
