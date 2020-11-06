@@ -20,7 +20,7 @@ React with Firebase app for Super Mario fans
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-![screenshot](http://localhost:3000/public/MarioPlan.PNG)
+![screenshot](https://github.com/dimitur2204/MarioPlan-App/blob/main/public/MarioPlan.PNG?raw=true)
 
 It is a simple React frontend application with Firebase backend application with simple CRUD operations, authentication and notifications done with Firebase Functions (Triggers).
 
